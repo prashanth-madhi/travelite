@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Travellite | Stay Tuned </title>
+    
+    <meta name="theme-color" content="#fcd12a">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --brand-yellow: #fcd12a;
+            --brand-red: #d32f2f;
+            --glass-white: rgba(255, 255, 255, 0.95);
+        }
+
+        /* Responsive Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--brand-yellow);
+            overflow: hidden; /* Prevents unwanted scrolling on mobile */
+        }
+
+        /* Full Screen Background Wrapper */
+        .wrapper {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: linear-gradient(rgba(252, 209, 42, 0.8), rgba(252, 209, 42, 0.8)), 
+                        url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Main Card - Adaptive Width */
+        .card {
+            background: var(--glass-white);
+            width: 100%;
+            max-width: 400px; /* Desktop width limit */
+            padding: 40px 30px;
+            border-radius: 28px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            width: 70%; /* Scales relative to card width */
+            max-width: 220px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--brand-red);
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .slogan {
+            color: #555;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        /* Action Buttons */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        /* Active/Touch States for Mobile */
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .insta {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+        }
+
+        .whatsapp {
+            background-color: #25d366;
+            color: white;
+        }
+
+        .btn i {
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+
+        /* Founder Section */
+        .founder {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
+        }
+
+        .founder span {
+            display: block;
+            font-size: 0.75rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .founder-name {
+            font-size: 1rem;
+            color: #222;
+            font-weight: 600;
+        }
+
+        /* Mobile Specific Adjustments */
+        @media (max-height: 600px) {
+            .card { padding: 25px 20px; }
+            .logo { width: 50%; margin-bottom: 10px; }
+            .founder { margin-top: 20px; padding-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="card">
+            <img src="Travellite - Red.jpg" alt="Travellite" class="logo">
+            
+            <h1>Coming Soon</h1>
+
+            <div class="links">
+                <a href="https://www.instagram.com/travellitepro/" target="_blank" class="btn insta">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+
+                <a href="https://wa.me/16473854770" class="btn whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+
+            <div class="founder">
+                <span>Founder</span>
+                <div class="founder-name">Prashanth</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
